@@ -1,0 +1,27 @@
+#include <iostream>
+#include <stdlib.h>
+
+using namespace std;
+
+int num, ans, contad;
+
+int main(){
+  srand(time(NULL));
+  num=rand() % 100+1;
+  contad=0;
+  cout<<"I dare you to find the number I have, it is between 1 and 100: ";
+  do{
+    cin>>ans;
+    contad=contad+1;
+    if(num<ans){
+      cout<<"Your number is too high, try again #SorryNotSorry: ";
+    } else{
+      if(num>ans){
+        cout << "Your number is too low, try again #SorryNotSorry: ";
+      }
+
+    }
+  } while (num != ans);
+  cout<< "Finally you got it. The number was: "<<ans<<endl;
+  cout<< "You made "<< contad << " guesses to finally get to the right number."<<endl;
+}
